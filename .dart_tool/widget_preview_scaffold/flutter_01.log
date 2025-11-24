@@ -1,0 +1,68 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter widget-preview start --machine --web-server --dtd-url ws://127.0.0.1:52469/eqNkOhOfFwI= --devtools-server-address http://127.0.0.1:9101/
+
+## exception
+
+StateError: Bad state: Unable to find the context to /Users/devangsonawane/ethernet_express/macos/Flutter/ephemeral/.symlinks/plugins/share_plus/test/share_plus_linux_test.dart
+
+```
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:177:5)
+#1      PreviewDetector._onFileSystemEvent.<anonymous closure> (package:flutter_tools/src/widget_preview/preview_detector.dart:146:50)
+#2      PreviewDetectorMutex.runGuarded (package:flutter_tools/src/widget_preview/utils.dart:99:35)
+<asynchronous suspension>
+#3      PreviewDetector._onFileSystemEvent (package:flutter_tools/src/widget_preview/preview_detector.dart:118:5)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.38.1, on macOS 26.1 25B78 darwin-arm64, locale en-IN) [71ms]
+    • Flutter version 3.38.1 on channel stable at /Users/devangsonawane/tools/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision b45fa18946 (11 days ago), 2025-11-12 22:09:06 -0600
+    • Engine revision b5990e5ccc
+    • Dart version 3.10.0
+    • DevTools version 2.51.1
+    • Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, omit-legacy-version-file, enable-lldb-debugging
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 36.1.0-rc1) [22.6s]
+    • Android SDK at /Users/devangsonawane/Library/Android/sdk
+    • Emulator version 36.1.9.0 (build_id 13823996) (CL:N/A)
+    • Platform android-36.1, build-tools 36.1.0-rc1
+    • Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (build 21.0.7+-13880790-b1038.58)
+    • All Android licenses accepted.
+
+[!] Xcode - develop for iOS and macOS [1,624ms]
+    ✗ Xcode installation is incomplete; a full installation is necessary for iOS and macOS development.
+      Download at: https://developer.apple.com/xcode/
+      Or install Xcode via the App Store.
+      Once installed, run:
+        sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+        sudo xcodebuild -runFirstLaunch
+    • CocoaPods version 1.16.2
+
+[✓] Chrome - develop for the web [27ms]
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Connected device (3 available) [28.6s]
+    • CPH2757 (mobile) • 1e4eacbd • android-arm64  • Android 15 (API 35)
+    • macOS (desktop)  • macos    • darwin-arm64   • macOS 26.1 25B78 darwin-arm64
+    • Chrome (web)     • chrome   • web-javascript • Google Chrome 142.0.7444.176
+
+[!] Network resources [25.8s]
+    ✗ An HTTP error occurred while checking "https://pub.dev/": Connection closed before full header was received
+    ✗ An HTTP error occurred while checking "https://storage.googleapis.com/": Connection closed before full header was received
+    ✗ An HTTP error occurred while checking "https://maven.google.com/": Connection closed before full header was received
+    ✗ An HTTP error occurred while checking "https://cocoapods.org/": Read failed
+    ✗ An HTTP error occurred while checking "https://github.com/": Connection reset by peer
+
+! Doctor found issues in 2 categories.
+```
